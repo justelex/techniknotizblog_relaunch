@@ -4,7 +4,7 @@ with import <nixpkgs> {};
 
 # Make a new "derivation" that represents our shell
 stdenv.mkDerivation {
-  name = "FFWW_WEB_BULDER";
+  name = "defaultbuilder";
 
   # The packages in the `buildInputs` list will be added to the PATH in our shell
   buildInputs = [
@@ -22,7 +22,7 @@ stdenv.mkDerivation {
 	#pkgs.python38Packages.setuptools
  ];
 	  shellHook = ''
-    figlet "Autoanalyze  DEV ENV" | lolcat --freq 0.5
+    figlet "defaultbuilder  DEV ENV" | lolcat --freq 0.5
   '';
 }
 
